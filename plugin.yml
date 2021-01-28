@@ -1,0 +1,10 @@
+name: NoPhysics
+main: com.jojodmo.physics.Main
+version: 1.4
+api-version: 1.13
+soft-depend: [WorldGuard, WorldEdit]
+
+commands:
+  physics:
+    description: Enable or Disable physics
+    usage: /physics <enable/disable/status> [world]

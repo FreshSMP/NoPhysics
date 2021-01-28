@@ -1,0 +1,53 @@
+# Whether or not using /physics <enable/disable> should enable or disable physics globally.
+# Set this to true to make /physics <enable/disable> toggle physics throughout the entire server.
+# Set this to false to make /physics <enable/disable> work only in the current world.
+# If this is false, physics can still be toggled globally with /physics <enable/disable> global
+#
+# Default: true (/physics works globally)
+isToggleGlobal: true
+
+# The default values for whether or not physics is enabled for each world.
+# If you do not set the value for a world, physics will be enabled there by default.
+#
+# Set a world to true if you want physics to be enabled there after a server restart
+# Set a world to false if you want physics to be disabled there after a server restart
+#
+# If you are using WorldGuard, enabling physics in a world will make the world obey
+# WorldGuard rules, and disabling it will disable physics everywhere in that world,
+# regardless of the WorldGuard rules
+#
+# Default: all true
+worlds:
+  world: true
+  world_nether: true
+  world_the_end: true
+
+# The materials for which physics should be disabled, if physics is disabled in that world.
+# If you want to use NoPhysics normally and toggle physics for all blocks, do not set this.
+#
+# See https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html for a list of valid materials.
+#
+# For example, to only disable physics for normal and red sand, you would set this to
+#
+# blockTypes:
+#   - "minecraft:SAND"
+#   - "minecraft:RED_SAND"
+#
+# And to use NoPhysics normally, you would set this to
+# blockTypes: null
+blockTypes: null
+
+# The materials for which physics should be disabled, even physics is disabled in that world.
+# If you want to use NoPhysics normally and toggle physics for all blocks, do not set this.
+#
+# See https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html for a list of valid materials.
+#
+# For example, to only disable physics for all blocks, but allow it for chests, you would set this and blockTypes to
+#
+# blockTypes: null
+# enablePhysicsBlockTypes:
+#   - "minecraft:CHEST"
+#
+# And to use NoPhysics normally, you would set this to
+# enablePhysicsBlockTypes: null
+enablePhysicsBlockTypes: null

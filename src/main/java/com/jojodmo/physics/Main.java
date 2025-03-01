@@ -193,9 +193,9 @@ public class Main extends JavaPlugin implements Listener{
 			ignorePhysics.add(currentLoc);
 			if(!belowType.isSolid()){
 				below.getBlock().setType(Material.BARRIER);
-				Main.that.getServer().getScheduler().runTaskLater(Main.that, () -> {
+				Main.that.getServer().getRegionScheduler().runDelayed(Main.that, currentLoc, scheduledTask -> {
 					below.getBlock().setType(belowType);
-					Main.that.getServer().getScheduler().runTaskLater(Main.that, () -> {
+					Main.that.getServer().getRegionScheduler().runDelayed(Main.that, currentLoc, scheduledTask2 -> {
 						ignorePhysics.remove(below);
 						ignorePhysics.remove(currentLoc);
 					}, 5L);

@@ -100,7 +100,7 @@ public class Main extends JavaPlugin implements Listener {
 		this.getServer().getPluginManager().registerEvents(this, this);
 
 		this.getLogger().log(Level.INFO, "NoPhysics V" + this.getDescription().getVersion() + " by jojodmo enabled!");
-		if (hookedWG){
+		if (hookedWG) {
 			this.getLogger().log(Level.INFO, "Successfully hooked into WorldGuard");
 		}
 
@@ -133,7 +133,7 @@ public class Main extends JavaPlugin implements Listener {
 			return def;
 		}
 
-		if (m.name().matches("^BARRIER(_BLOCK)?$")){
+		if (m.name().matches("^BARRIER(_BLOCK)?$")) {
 			return false;
 		} else if (dontDoMaterials.contains(m)) {
 			return true;
@@ -224,7 +224,7 @@ public class Main extends JavaPlugin implements Listener {
 			e.setCancelled(true);
 		}
 
-		if (shouldCancelPhysicsEvent(e.getBlock()) || !shouldDoPhysics(e.getChangedType(), true)){
+		if (shouldCancelPhysicsEvent(e.getBlock()) || !shouldDoPhysics(e.getChangedType(), true)) {
 			e.setCancelled(true);
 		}
 	}
@@ -235,7 +235,7 @@ public class Main extends JavaPlugin implements Listener {
 
 	public boolean onCommand(@NotNull CommandSender sender, Command cmd, @NotNull String label, String @NotNull [] args) {
 		if (cmd.getName().equalsIgnoreCase("physics")) {
-			if (args.length == 0 || args[0].toLowerCase().matches("info|plugin|pl|ver|version")){
+			if (args.length == 0 || args[0].toLowerCase().matches("info|plugin|pl|ver|version")) {
 				sender.sendMessage(prefix + "Running NoPhysics " + this.getDescription().getVersion() + " By jojodmo");
 				return true;
 			} else {

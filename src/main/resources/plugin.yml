@@ -2,8 +2,8 @@ name: NoPhysics
 main: com.jojodmo.physics.Main
 version: 1.4
 api-version: 1.13
-soft-depend: [WorldGuard, WorldEdit]
 folia-supported: true
+soft-depend: [WorldGuard, WorldEdit]
 
 commands:
   physics:

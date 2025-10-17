@@ -1,12 +1,12 @@
-# Whether or not using /physics <enable/disable> should enable or disable physics globally.
+# Whether using /physics <enable/disable> should enable or disable physics globally.
 # Set this to true to make /physics <enable/disable> toggle physics throughout the entire server.
-# Set this to false to make /physics <enable/disable> work only in the current world.
+# Set this 'to' false to make /physics <enable/disable> work only in the current world.
 # If this is false, physics can still be toggled globally with /physics <enable/disable> global
 #
 # Default: true (/physics works globally)
 isToggleGlobal: true
 
-# The default values for whether or not physics is enabled for each world.
+# The default values for whether physics is enabled for each world.
 # If you do not set the value for a world, physics will be enabled there by default.
 #
 # Set a world to true if you want physics to be enabled there after a server restart

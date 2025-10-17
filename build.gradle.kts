@@ -1,5 +1,6 @@
 plugins {
     java
+    id("com.gradleup.shadow") version "9.2.2"
 }
 
 repositories {
@@ -26,4 +27,16 @@ dependencies {
 
 java {
     toolchain.languageVersion.set(JavaLanguageVersion.of(21))
+}
+
+tasks.shadowJar {
+    relocate("com.tcoded.folialib", "com.jojodmo.physics.libs.folialib")
+}
+
+tasks.jar {
+    enabled = false
+}
+
+tasks.build {
+    dependsOn(tasks.shadowJar)
 }
